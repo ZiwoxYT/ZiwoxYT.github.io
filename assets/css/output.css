@@ -564,6 +564,10 @@ video {
   margin-bottom: auto;
 }
 
+.mb-1 {
+  margin-bottom: 10px;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -650,6 +654,135 @@ video {
   padding-bottom: 0.625rem;
 }
 
+/* --- Light Mode and Dark Mode --- */
+
+html, body {
+  overflow: hidden;
+}
+
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #181818;
+  color: #fff;
+}
+
+.theme-toggle {
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 20px; /* Jarak dari atas */
+  right: 20px; /* Jarak dari kanan */
+  z-index: 1000; /* Agar berada di atas elemen lain */
+}
+
+.theme-toggle.light-mode {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.theme-toggle.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.theme-toggle i {
+  font-size: 1.5rem; /* Ukuran ikon */
+}
+
+.arrow-button {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.arrow-button.light-mode {
+  background-color: rgba(255, 255, 255, 0.8); /* Background warna untuk light mode */
+  color: black; /* Warna teks/icon untuk light mode */
+}
+
+.arrow-button.dark-mode {
+  background-color: rgba(0, 0, 0, 0.8); /* Background warna untuk dark mode */
+  color: white; /* Warna teks/icon untuk dark mode */
+}
+
+#leftArrowButton {
+  left: 20px; /* Jarak dari sisi kiri */
+}
+
+#rightArrowButton {
+  right: 20px; /* Jarak dari sisi kanan */
+}
+
+.slide-out-left {
+  animation: slideOutLeft 0.5s forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.5s forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s forwards;
+}
+
+@keyframes slideOutLeft {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-300%);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+      transform: translateX(300%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(300%);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+      transform: translateX(-300%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+/* --- Light Mode and Dark Mode --- */
+
 .button {
   display: block;
   text-align: center;
@@ -675,6 +808,14 @@ video {
 
 .github:hover {
   background-color: #161B22; /* Warna saat hover */
+}
+
+.instagram {
+  background-color: #E1306C; /* Warna primer GitHub */
+}
+
+.instagram:hover {
+  background-color: #d81e5b; /* Warna saat hover */
 }
 
 .text-center {
