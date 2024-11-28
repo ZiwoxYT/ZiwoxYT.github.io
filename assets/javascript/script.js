@@ -188,7 +188,7 @@ function loadMainContent() {
                 <img class="max-w-20 sm:max-w-32 mx-auto" src="./assets/image/cone.webp" alt="Profile Image">
             </div>
             <div class="text-center mb-8">
-                <div class="text-xl sm:text-4xl font-bold mb-1">Angga Juliaan</div>
+                <div class="text-xl sm:text-4xl font-bold mb-1">Angga Juliawan</div>
                 <div class="sm:text-3xl font-semibold">Informatics Engineering Student at INSTIKI | Learn Web Programming</div>
                 <div class="sm:text-3xl font-semibold">Enthusiastic about the Latest Technology and Innovation</div>
             </div>
